@@ -1,0 +1,7 @@
+{
+  "scenario_id": "scenario-001",
+  "name": "Orbitron Standard Scenario (Seed 42)",
+  "seed": 42,
+  "start_at": "2026-10-31T06:00:00Z",
+  "end_at": "2026-11-01T06:00:00Z"
+}

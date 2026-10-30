@@ -1,0 +1,5 @@
+# Orbitron Scheduler Module Dependencies
+skyfield>=1.55
+sgp4>=2.27
+ortools>=9.15.6755
+pytest>=9.2.0
