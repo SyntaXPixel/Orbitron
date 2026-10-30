@@ -157,3 +157,4 @@ class VirtualSatelliteActor:
             "ciphertext_sha256": ciphertext_sha256,
             "aad": aad,
         }
+

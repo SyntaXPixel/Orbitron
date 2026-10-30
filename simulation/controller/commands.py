@@ -42,3 +42,4 @@ class CommandDispatcher:
                 result={},
                 reasons=[{"code": "HANDLER_ERROR", "message": str(exc)}],
             )
+

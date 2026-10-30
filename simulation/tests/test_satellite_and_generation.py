@@ -80,3 +80,4 @@ def test_automatic_downlink_request_evaluation():
         simulation_time_iso="2026-10-31T06:00:00Z",
     )
     assert req3 is None
+

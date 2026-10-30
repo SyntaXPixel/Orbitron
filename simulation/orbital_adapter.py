@@ -48,3 +48,4 @@ def propagate_satellites(orbit_definitions: List[Dict[str, Any]], at: str) -> Li
         raise IntegrationDependencyError(
             "Shared orbital propagation interface scheduler.api.propagate_satellites is not available."
         ) from exc
+

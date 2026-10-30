@@ -56,3 +56,4 @@ class FaultsManager:
         state = self.get_satellite_fault(satellite_id)
         state.comms_fault = comms_fault
         state.instrument_fault = instrument_fault
+

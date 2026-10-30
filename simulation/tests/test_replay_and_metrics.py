@@ -63,3 +63,4 @@ def test_replay_isolation_does_not_mutate_original():
 
     res = replay_scenario(scenario, algorithm="fifo")
     assert len(scenario["initial_jobs"]) == orig_job_count
+

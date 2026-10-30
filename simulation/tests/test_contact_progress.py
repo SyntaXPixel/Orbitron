@@ -121,3 +121,4 @@ def test_contact_rain_capacity_reduction():
         weather_capacity_factor=0.5,
     )
     assert b_rain == 5_000_000
+

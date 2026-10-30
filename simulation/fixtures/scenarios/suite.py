@@ -183,3 +183,4 @@ def get_emergency_job_scenario() -> Dict[str, Any]:
         }
     ]
     return generate_scenario("scenario-emergency", "Emergency Priority Arrival", num_satellites=10, num_stations=3, events=events)
+

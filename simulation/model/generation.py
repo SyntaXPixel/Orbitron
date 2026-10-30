@@ -50,3 +50,4 @@ class SatelliteDataGenerator:
         if committed_total >= self.generated_bytes_total:
             self.generated_bytes_total = committed_total
             self._fractional_credit = 0.0
+

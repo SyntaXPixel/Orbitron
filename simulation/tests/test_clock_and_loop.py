@@ -126,3 +126,4 @@ def test_controller_commands_dispatch(test_config, default_scenario):
     ack_reset = controller.dispatcher.dispatch(reset_cmd)
     assert ack_reset.status == "completed"
     assert controller.scenario_id == "scenario-cmd-test-gen2"
+

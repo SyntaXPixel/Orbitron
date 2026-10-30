@@ -32,3 +32,4 @@ def test_120_satellite_replay(scale_scenario):
     assert res["algorithm"] == "fifo"
     assert res["metrics"]["total_jobs"] == 120
     assert res["metrics"]["resource_conflicts"] == 0
+

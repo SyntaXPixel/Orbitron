@@ -32,3 +32,4 @@ def test_cli_prepare_creates_directories_and_keys(tmp_path):
     # Verify gateway buffer directories
     for st_num in (1, 2, 3):
         assert cfg.gateway_buffer_dir(f"station-{st_num:02d}").exists()
+

@@ -49,3 +49,4 @@ def test_gateway_acknowledgement_cannot_impersonate_owner_receipt():
     }
     assert "owner_decryption_status" not in gateway_resp
     assert "owner_plaintext_sha256" not in gateway_resp
+

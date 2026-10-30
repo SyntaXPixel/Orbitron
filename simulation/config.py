@@ -87,3 +87,4 @@ class SimulationConfig(BaseModel):
     def ensure_directories(self) -> None:
         """Create runtime directory hierarchy."""
         self.checkpoints_dir.mkdir(parents=True, exist_ok=True)
+

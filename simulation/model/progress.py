@@ -137,3 +137,4 @@ class ContactProgressTracker:
             self.is_final = True
 
         return new_bytes, self.is_final
+

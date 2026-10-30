@@ -94,3 +94,4 @@ def canonical_payload_aad(fields: Dict[str, Any]) -> bytes:
         # Fallback to standard canonical JSON encoding
         import json
         return json.dumps(fields, sort_keys=True, separators=(",", ":")).encode("utf-8")
+

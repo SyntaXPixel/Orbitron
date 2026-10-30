@@ -70,3 +70,4 @@ class CheckpointManager:
             local_checkpoint.last_tick_simulation_time = bg_sim_time
 
         return local_checkpoint
+

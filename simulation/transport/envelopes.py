@@ -26,3 +26,4 @@ def parse_payload_envelope(data: Dict[str, Any]) -> PayloadEnvelope:
 def parse_associated_data(data: Dict[str, Any]) -> PayloadAssociatedData:
     """Parse and validate canonical associated data."""
     return PayloadAssociatedData(**data)
+

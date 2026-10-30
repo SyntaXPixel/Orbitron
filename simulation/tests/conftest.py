@@ -94,3 +94,4 @@ def default_scenario():
 @pytest.fixture
 def scale_scenario():
     return get_scale_scenario()
+

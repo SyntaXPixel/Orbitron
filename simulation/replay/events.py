@@ -35,3 +35,4 @@ class ReplayEventQueue:
 
     def peek_next_time(self):
         return self.events[0].timestamp if self.events else None
+

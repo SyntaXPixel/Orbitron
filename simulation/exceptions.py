@@ -33,3 +33,4 @@ class SecurityVerificationError(SimulationError):
 class ConfigurationError(SimulationError):
     """Raised when required configuration or credentials are missing or invalid."""
     pass
+

@@ -60,3 +60,4 @@ def compute_evaluation_metrics(
         scheduling_duration_ms=scheduling_duration_ms,
         bookings_changed=bookings_changed,
     )
+

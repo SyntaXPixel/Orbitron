@@ -111,3 +111,4 @@ class StationGatewayActor:
             result={"accepted": True, "contact_id": contact_id},
             reasons=[{"code": "ACCEPTED", "message": "Station operational and ready for contact."}],
         )
+

@@ -77,3 +77,4 @@ def create_receiver_app(
         return receipt.model_dump()
 
     return app
+
