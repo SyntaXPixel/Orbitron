@@ -1,0 +1,15 @@
+# Runtime data
+.runtime/
+*.runtime/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Local credentials and keys
+*.key
+*.pem
+*.token
+service-credentials.json

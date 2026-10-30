@@ -1,0 +1,672 @@
+{
+  "id": "scenario-default",
+  "name": "Default Operations Fleet",
+  "seed": 42,
+  "start_at": "2026-10-31T06:00:00Z",
+  "end_at": "2026-10-31T12:00:00Z",
+  "catalog": {
+    "organizations": [
+      {
+        "id": "org-a",
+        "name": "Alpha Constellations",
+        "slug": "alpha"
+      },
+      {
+        "id": "org-b",
+        "name": "Beta Ground Networks",
+        "slug": "beta"
+      }
+    ],
+    "satellites": [
+      {
+        "id": "sat-a-001",
+        "owner_org_id": "org-a",
+        "name": "Orbiter 1",
+        "bands": [
+          "X",
+          "Ka"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-b-002",
+        "owner_org_id": "org-b",
+        "name": "Orbiter 2",
+        "bands": [
+          "S",
+          "X"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-a-003",
+        "owner_org_id": "org-a",
+        "name": "Orbiter 3",
+        "bands": [
+          "X",
+          "Ka"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-b-004",
+        "owner_org_id": "org-b",
+        "name": "Orbiter 4",
+        "bands": [
+          "S",
+          "X"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-a-005",
+        "owner_org_id": "org-a",
+        "name": "Orbiter 5",
+        "bands": [
+          "X",
+          "Ka"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-b-006",
+        "owner_org_id": "org-b",
+        "name": "Orbiter 6",
+        "bands": [
+          "S",
+          "X"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-a-007",
+        "owner_org_id": "org-a",
+        "name": "Orbiter 7",
+        "bands": [
+          "X",
+          "Ka"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-b-008",
+        "owner_org_id": "org-b",
+        "name": "Orbiter 8",
+        "bands": [
+          "S",
+          "X"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-a-009",
+        "owner_org_id": "org-a",
+        "name": "Orbiter 9",
+        "bands": [
+          "X",
+          "Ka"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      },
+      {
+        "id": "sat-b-010",
+        "owner_org_id": "org-b",
+        "name": "Orbiter 10",
+        "bands": [
+          "S",
+          "X"
+        ],
+        "max_downlink_rate_bps": 300000000,
+        "source": "simulated",
+        "generation_rate_bytes_per_second": 1000000
+      }
+    ],
+    "stations": [
+      {
+        "id": "station-01",
+        "owner_org_id": "org-a",
+        "name": "Ground Station 1",
+        "latitude_deg": -10.0,
+        "longitude_deg": -65.0,
+        "altitude_m": 150.0,
+        "operational_status": "operational",
+        "antennas": [
+          {
+            "id": "station-01-ant-1",
+            "station_id": "station-01",
+            "bands": [
+              "S",
+              "X",
+              "Ka"
+            ],
+            "max_rate_bps": 400000000,
+            "operational_status": "operational"
+          }
+        ]
+      },
+      {
+        "id": "station-02",
+        "owner_org_id": "org-b",
+        "name": "Ground Station 2",
+        "latitude_deg": 10.0,
+        "longitude_deg": -30.0,
+        "altitude_m": 150.0,
+        "operational_status": "operational",
+        "antennas": [
+          {
+            "id": "station-02-ant-1",
+            "station_id": "station-02",
+            "bands": [
+              "S",
+              "X",
+              "Ka"
+            ],
+            "max_rate_bps": 400000000,
+            "operational_status": "operational"
+          }
+        ]
+      },
+      {
+        "id": "station-03",
+        "owner_org_id": "org-a",
+        "name": "Ground Station 3",
+        "latitude_deg": 30.0,
+        "longitude_deg": 5.0,
+        "altitude_m": 150.0,
+        "operational_status": "operational",
+        "antennas": [
+          {
+            "id": "station-03-ant-1",
+            "station_id": "station-03",
+            "bands": [
+              "S",
+              "X",
+              "Ka"
+            ],
+            "max_rate_bps": 400000000,
+            "operational_status": "operational"
+          }
+        ]
+      }
+    ],
+    "orbit_definitions": [
+      {
+        "satellite_id": "sat-a-001",
+        "format": "tle",
+        "line1": "1 25541U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25541  51.6400 030.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-b-002",
+        "format": "tle",
+        "line1": "1 25542U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25542  51.6400 060.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-a-003",
+        "format": "tle",
+        "line1": "1 25543U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25543  51.6400 090.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-b-004",
+        "format": "tle",
+        "line1": "1 25544U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25544  51.6400 120.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-a-005",
+        "format": "tle",
+        "line1": "1 25545U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25545  51.6400 150.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-b-006",
+        "format": "tle",
+        "line1": "1 25546U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25546  51.6400 180.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-a-007",
+        "format": "tle",
+        "line1": "1 25547U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25547  51.6400 210.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-b-008",
+        "format": "tle",
+        "line1": "1 25548U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25548  51.6400 240.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-a-009",
+        "format": "tle",
+        "line1": "1 25549U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25549  51.6400 270.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      },
+      {
+        "satellite_id": "sat-b-010",
+        "format": "tle",
+        "line1": "1 25550U 98067A   26304.25000000  .00016717  00000-0  10270-3 0  9001",
+        "line2": "2 25550  51.6400 300.0000 0006703 130.5360 325.0288 15.72125391563537",
+        "epoch_at": "2026-10-31T00:00:00Z",
+        "orbit_source": "synthetic"
+      }
+    ]
+  },
+  "opportunities": [
+    {
+      "id": "opp-sat-a-001-station-01",
+      "satellite_id": "sat-a-001",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-001-station-02",
+      "satellite_id": "sat-a-001",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-001-station-03",
+      "satellite_id": "sat-a-001",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-002-station-01",
+      "satellite_id": "sat-b-002",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-002-station-02",
+      "satellite_id": "sat-b-002",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-002-station-03",
+      "satellite_id": "sat-b-002",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-003-station-01",
+      "satellite_id": "sat-a-003",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-003-station-02",
+      "satellite_id": "sat-a-003",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-003-station-03",
+      "satellite_id": "sat-a-003",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-004-station-01",
+      "satellite_id": "sat-b-004",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-004-station-02",
+      "satellite_id": "sat-b-004",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-004-station-03",
+      "satellite_id": "sat-b-004",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-005-station-01",
+      "satellite_id": "sat-a-005",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-005-station-02",
+      "satellite_id": "sat-a-005",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-005-station-03",
+      "satellite_id": "sat-a-005",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-006-station-01",
+      "satellite_id": "sat-b-006",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-006-station-02",
+      "satellite_id": "sat-b-006",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-006-station-03",
+      "satellite_id": "sat-b-006",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-007-station-01",
+      "satellite_id": "sat-a-007",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-007-station-02",
+      "satellite_id": "sat-a-007",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-007-station-03",
+      "satellite_id": "sat-a-007",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-008-station-01",
+      "satellite_id": "sat-b-008",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-008-station-02",
+      "satellite_id": "sat-b-008",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-008-station-03",
+      "satellite_id": "sat-b-008",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-009-station-01",
+      "satellite_id": "sat-a-009",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-009-station-02",
+      "satellite_id": "sat-a-009",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-a-009-station-03",
+      "satellite_id": "sat-a-009",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-010-station-01",
+      "satellite_id": "sat-b-010",
+      "station_id": "station-01",
+      "antenna_id": "station-01-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-010-station-02",
+      "satellite_id": "sat-b-010",
+      "station_id": "station-02",
+      "antenna_id": "station-02-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    },
+    {
+      "id": "opp-sat-b-010-station-03",
+      "satellite_id": "sat-b-010",
+      "station_id": "station-03",
+      "antenna_id": "station-03-ant-1",
+      "start_at": "2026-10-31T06:15:00Z",
+      "end_at": "2026-10-31T06:25:00Z",
+      "expected_rate_bps": 200000000
+    }
+  ],
+  "initial_jobs": [
+    {
+      "id": "job-sat-a-001-01",
+      "satellite_id": "sat-a-001",
+      "owner_org_id": "org-a",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "emergency",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-b-002-01",
+      "satellite_id": "sat-b-002",
+      "owner_org_id": "org-b",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "routine",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-a-003-01",
+      "satellite_id": "sat-a-003",
+      "owner_org_id": "org-a",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "routine",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-b-004-01",
+      "satellite_id": "sat-b-004",
+      "owner_org_id": "org-b",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "emergency",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-a-005-01",
+      "satellite_id": "sat-a-005",
+      "owner_org_id": "org-a",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "routine",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-b-006-01",
+      "satellite_id": "sat-b-006",
+      "owner_org_id": "org-b",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "routine",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-a-007-01",
+      "satellite_id": "sat-a-007",
+      "owner_org_id": "org-a",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "emergency",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-b-008-01",
+      "satellite_id": "sat-b-008",
+      "owner_org_id": "org-b",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "routine",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-a-009-01",
+      "satellite_id": "sat-a-009",
+      "owner_org_id": "org-a",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "routine",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-sat-b-010-01",
+      "satellite_id": "sat-b-010",
+      "owner_org_id": "org-b",
+      "data_bytes": 500000000,
+      "deadline_at": "2026-10-31T07:30:00Z",
+      "priority": "emergency",
+      "allow_split": true,
+      "created_at": "2026-10-31T06:00:00Z"
+    }
+  ],
+  "events": [],
+  "policy": {
+    "protect_active_contacts": true,
+    "allow_active_preemption": false
+  }
+}

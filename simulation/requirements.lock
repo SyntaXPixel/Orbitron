@@ -1,0 +1,10 @@
+# Pinned dependencies for simulation module
+anyio==4.15.1
+cryptography==50.0.2
+fastapi==0.162.0
+httpx==0.28.1
+pydantic==2.14.2
+pydantic_core==2.50.2
+pytest==9.2.0
+starlette==1.10.0
+uvicorn==0.54.0
