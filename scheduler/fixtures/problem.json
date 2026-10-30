@@ -1,0 +1,591 @@
+{
+  "contract_version": "orbitron.v1",
+  "simulation_time": "2026-10-31T06:00:00Z",
+  "schedule_version": 1,
+  "planning_revision": 1,
+  "horizon": {
+    "from_at": "2026-10-31T06:00:00Z",
+    "to_at": "2026-10-31T18:00:00Z"
+  },
+  "satellites": [
+    {
+      "id": "sat-a-001",
+      "name": "Orbitron-Alpha",
+      "owner_org_id": "org-alpha",
+      "supported_bands": [
+        "S",
+        "X"
+      ],
+      "max_downlink_rate_bps": 10000000,
+      "max_parallel_contacts": 1,
+      "onboard_bytes": 500000000,
+      "operational_status": "available",
+      "telemetry_status": "fresh",
+      "position": null,
+      "last_telemetry_at": null,
+      "source": "simulated",
+      "orbit_source": "synthetic",
+      "orbit_epoch_at": "2026-10-31T00:00:00Z"
+    },
+    {
+      "id": "sat-b-001",
+      "name": "Orbitron-Beta",
+      "owner_org_id": "org-beta",
+      "supported_bands": [
+        "X",
+        "Ka"
+      ],
+      "max_downlink_rate_bps": 20000000,
+      "max_parallel_contacts": 2,
+      "onboard_bytes": 1000000000,
+      "operational_status": "available",
+      "telemetry_status": "fresh",
+      "position": null,
+      "last_telemetry_at": null,
+      "source": "simulated",
+      "orbit_source": "synthetic",
+      "orbit_epoch_at": "2026-10-31T00:00:00Z"
+    },
+    {
+      "id": "sat-c-001",
+      "name": "Orbitron-Gamma",
+      "owner_org_id": "org-gamma",
+      "supported_bands": [
+        "S",
+        "Ka"
+      ],
+      "max_downlink_rate_bps": 8000000,
+      "max_parallel_contacts": 1,
+      "onboard_bytes": 200000000,
+      "operational_status": "available",
+      "telemetry_status": "fresh",
+      "position": null,
+      "last_telemetry_at": null,
+      "source": "simulated",
+      "orbit_source": "synthetic",
+      "orbit_epoch_at": "2026-10-31T00:00:00Z"
+    }
+  ],
+  "stations": [
+    {
+      "id": "gs-svalbard",
+      "name": "Svalbard Arctic Station",
+      "owner_org_id": "org-alpha",
+      "latitude_deg": 78.2298,
+      "longitude_deg": 15.4078,
+      "min_elevation_deg": 5.0,
+      "operational_status": "online",
+      "connection_status": "connected",
+      "weather_capacity_factor": 1.0,
+      "sharing_enabled": true,
+      "approved_partner_org_ids": [
+        "org-beta"
+      ],
+      "antennas": [
+        {
+          "id": "ant-sv-01",
+          "name": "Svalbard Dish 1",
+          "supported_bands": [
+            "S",
+            "X"
+          ],
+          "max_rate_bps": 15000000,
+          "setup_seconds": 20,
+          "status": "available"
+        },
+        {
+          "id": "ant-sv-02",
+          "name": "Svalbard Ka Dish",
+          "supported_bands": [
+            "Ka"
+          ],
+          "max_rate_bps": 25000000,
+          "setup_seconds": 30,
+          "status": "available"
+        }
+      ],
+      "last_heartbeat_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "gs-bangalore",
+      "name": "Bangalore Ground Station",
+      "owner_org_id": "org-beta",
+      "latitude_deg": 13.0334,
+      "longitude_deg": 77.564,
+      "min_elevation_deg": 10.0,
+      "operational_status": "online",
+      "connection_status": "connected",
+      "weather_capacity_factor": 0.8,
+      "sharing_enabled": true,
+      "approved_partner_org_ids": [
+        "org-alpha",
+        "org-gamma"
+      ],
+      "antennas": [
+        {
+          "id": "ant-blr-01",
+          "name": "Bangalore Main Dish",
+          "supported_bands": [
+            "S",
+            "X",
+            "Ka"
+          ],
+          "max_rate_bps": 20000000,
+          "setup_seconds": 25,
+          "status": "available"
+        }
+      ],
+      "last_heartbeat_at": "2026-10-31T06:00:00Z"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "opp-sat-b-001-gs-bangalore-ant-blr-01-Ka-fbbca456efbd",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "Ka",
+      "start_at": "2026-10-31T06:14:15Z",
+      "end_at": "2026-10-31T06:20:58Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-bangalore-ant-blr-01-X-0ab203b89459",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "X",
+      "start_at": "2026-10-31T06:14:15Z",
+      "end_at": "2026-10-31T06:20:58Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-bangalore-ant-blr-01-Ka-30790f25c29d",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "Ka",
+      "start_at": "2026-10-31T06:49:12Z",
+      "end_at": "2026-10-31T06:56:39Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-bangalore-ant-blr-01-S-0a0c35a5438a",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "S",
+      "start_at": "2026-10-31T06:49:12Z",
+      "end_at": "2026-10-31T06:56:39Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-01-S-2ada01b908bc",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "S",
+      "start_at": "2026-10-31T07:06:36Z",
+      "end_at": "2026-10-31T07:18:29Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-02-Ka-fc9933780a83",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T07:06:36Z",
+      "end_at": "2026-10-31T07:18:29Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-01-X-f43cae92f2cb",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "X",
+      "start_at": "2026-10-31T07:34:26Z",
+      "end_at": "2026-10-31T07:42:47Z",
+      "predicted_rate_bps": 15000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-02-Ka-ec0ee3f2ebcd",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T07:34:26Z",
+      "end_at": "2026-10-31T07:42:47Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-bangalore-ant-blr-01-Ka-62d76d1a37e8",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "Ka",
+      "start_at": "2026-10-31T07:52:51Z",
+      "end_at": "2026-10-31T08:02:24Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-bangalore-ant-blr-01-X-a208e4947f98",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "X",
+      "start_at": "2026-10-31T07:52:51Z",
+      "end_at": "2026-10-31T08:02:24Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-01-S-a315d988d353",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "S",
+      "start_at": "2026-10-31T08:45:12Z",
+      "end_at": "2026-10-31T08:56:59Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-02-Ka-412ca204792d",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T08:45:12Z",
+      "end_at": "2026-10-31T08:56:59Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-01-X-be7b8a95edab",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "X",
+      "start_at": "2026-10-31T09:15:50Z",
+      "end_at": "2026-10-31T09:26:19Z",
+      "predicted_rate_bps": 15000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-02-Ka-2feee826ad35",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T09:15:50Z",
+      "end_at": "2026-10-31T09:26:19Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-01-S-540c8bb59e83",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "S",
+      "start_at": "2026-10-31T10:24:37Z",
+      "end_at": "2026-10-31T10:35:43Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-02-Ka-635d2a215646",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T10:24:37Z",
+      "end_at": "2026-10-31T10:35:43Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-01-X-a2aeb53a95ca",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "X",
+      "start_at": "2026-10-31T10:56:54Z",
+      "end_at": "2026-10-31T11:08:57Z",
+      "predicted_rate_bps": 15000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-02-Ka-4aa80ceb644c",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T10:56:54Z",
+      "end_at": "2026-10-31T11:08:57Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-a-001-gs-bangalore-ant-blr-01-S-c0a5350787a8",
+      "satellite_id": "sat-a-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "S",
+      "start_at": "2026-10-31T11:05:05Z",
+      "end_at": "2026-10-31T11:11:39Z",
+      "predicted_rate_bps": 10000000
+    },
+    {
+      "id": "opp-sat-a-001-gs-bangalore-ant-blr-01-X-01359c89cdf1",
+      "satellite_id": "sat-a-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "X",
+      "start_at": "2026-10-31T11:05:05Z",
+      "end_at": "2026-10-31T11:11:39Z",
+      "predicted_rate_bps": 10000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-01-S-68a7cb2358cf",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "S",
+      "start_at": "2026-10-31T12:05:01Z",
+      "end_at": "2026-10-31T12:14:38Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-02-Ka-d3f7020be839",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T12:05:01Z",
+      "end_at": "2026-10-31T12:14:38Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-01-X-68ba9525b886",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "X",
+      "start_at": "2026-10-31T12:37:42Z",
+      "end_at": "2026-10-31T12:50:32Z",
+      "predicted_rate_bps": 15000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-02-Ka-d8ed241902c9",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T12:37:42Z",
+      "end_at": "2026-10-31T12:50:32Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-01-S-3199590fe87a",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "S",
+      "start_at": "2026-10-31T13:46:23Z",
+      "end_at": "2026-10-31T13:53:48Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-02-Ka-9258cf90768a",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T13:46:23Z",
+      "end_at": "2026-10-31T13:53:48Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-01-X-e70bf5646eba",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "X",
+      "start_at": "2026-10-31T14:18:16Z",
+      "end_at": "2026-10-31T14:31:15Z",
+      "predicted_rate_bps": 15000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-02-Ka-cdd3e09b9538",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T14:18:16Z",
+      "end_at": "2026-10-31T14:31:15Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-01-S-b241bc23e3e2",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "S",
+      "start_at": "2026-10-31T15:28:09Z",
+      "end_at": "2026-10-31T15:33:29Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-02-Ka-8c5a6e7714f7",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T15:28:09Z",
+      "end_at": "2026-10-31T15:33:29Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-01-X-787d25d2e3f8",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "X",
+      "start_at": "2026-10-31T15:58:34Z",
+      "end_at": "2026-10-31T16:11:26Z",
+      "predicted_rate_bps": 15000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-02-Ka-c3ebc6d81916",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T15:58:34Z",
+      "end_at": "2026-10-31T16:11:26Z",
+      "predicted_rate_bps": 20000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-01-S-6d496d16d975",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "S",
+      "start_at": "2026-10-31T17:09:03Z",
+      "end_at": "2026-10-31T17:14:23Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-svalbard-ant-sv-02-Ka-90aac705083e",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T17:09:03Z",
+      "end_at": "2026-10-31T17:14:23Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-bangalore-ant-blr-01-Ka-84369a2357b2",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "Ka",
+      "start_at": "2026-10-31T17:28:59Z",
+      "end_at": "2026-10-31T17:36:31Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-c-001-gs-bangalore-ant-blr-01-S-96a723c1f42b",
+      "satellite_id": "sat-c-001",
+      "station_id": "gs-bangalore",
+      "antenna_id": "ant-blr-01",
+      "band": "S",
+      "start_at": "2026-10-31T17:28:59Z",
+      "end_at": "2026-10-31T17:36:31Z",
+      "predicted_rate_bps": 8000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-01-X-31f2b1add37d",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-01",
+      "band": "X",
+      "start_at": "2026-10-31T17:38:38Z",
+      "end_at": "2026-10-31T17:51:28Z",
+      "predicted_rate_bps": 15000000
+    },
+    {
+      "id": "opp-sat-b-001-gs-svalbard-ant-sv-02-Ka-e01052ba1a1d",
+      "satellite_id": "sat-b-001",
+      "station_id": "gs-svalbard",
+      "antenna_id": "ant-sv-02",
+      "band": "Ka",
+      "start_at": "2026-10-31T17:38:38Z",
+      "end_at": "2026-10-31T17:51:28Z",
+      "predicted_rate_bps": 20000000
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-emg-01",
+      "satellite_id": "sat-b-001",
+      "owner_org_id": "org-beta",
+      "requested_bytes": 80000000,
+      "delivered_bytes": 0,
+      "remaining_bytes": 80000000,
+      "priority": "emergency",
+      "deadline_at": "2026-10-31T11:00:00Z",
+      "allow_split": false,
+      "status": "pending",
+      "reasons": [],
+      "created_at": "2026-10-31T06:00:00Z",
+      "updated_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "job-high-01",
+      "satellite_id": "sat-a-001",
+      "owner_org_id": "org-alpha",
+      "requested_bytes": 20000000,
+      "delivered_bytes": 0,
+      "remaining_bytes": 20000000,
+      "priority": "high",
+      "deadline_at": "2026-10-31T14:00:00Z",
+      "allow_split": false,
+      "status": "pending",
+      "reasons": [],
+      "created_at": "2026-10-31T06:01:00Z",
+      "updated_at": "2026-10-31T06:01:00Z"
+    },
+    {
+      "id": "job-split-01",
+      "satellite_id": "sat-c-001",
+      "owner_org_id": "org-gamma",
+      "requested_bytes": 150000000,
+      "delivered_bytes": 0,
+      "remaining_bytes": 150000000,
+      "priority": "routine",
+      "deadline_at": "2026-10-31T18:00:00Z",
+      "allow_split": true,
+      "status": "pending",
+      "reasons": [],
+      "created_at": "2026-10-31T06:02:00Z",
+      "updated_at": "2026-10-31T06:02:00Z"
+    }
+  ],
+  "existing_contacts": [],
+  "approved_sharing_relationships": [
+    {
+      "owner_org_id": "org-alpha",
+      "station_id": "gs-bangalore"
+    },
+    {
+      "owner_org_id": "org-beta",
+      "station_id": "gs-svalbard"
+    },
+    {
+      "owner_org_id": "org-gamma",
+      "station_id": "gs-bangalore"
+    }
+  ],
+  "policy": {
+    "protect_active_contacts": true,
+    "allow_active_preemption": false,
+    "minimum_contact_seconds": 1,
+    "random_seed": 42
+  }
+}

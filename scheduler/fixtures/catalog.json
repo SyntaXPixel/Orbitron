@@ -1,0 +1,136 @@
+{
+  "satellites": [
+    {
+      "id": "sat-a-001",
+      "name": "Orbitron-Alpha",
+      "owner_org_id": "org-alpha",
+      "supported_bands": ["S", "X"],
+      "max_downlink_rate_bps": 10000000,
+      "max_parallel_contacts": 1,
+      "onboard_bytes": 500000000,
+      "operational_status": "available",
+      "telemetry_status": "fresh",
+      "position": null,
+      "last_telemetry_at": null,
+      "source": "simulated",
+      "orbit_source": "synthetic",
+      "orbit_epoch_at": "2026-10-31T00:00:00Z"
+    },
+    {
+      "id": "sat-b-001",
+      "name": "Orbitron-Beta",
+      "owner_org_id": "org-beta",
+      "supported_bands": ["X", "Ka"],
+      "max_downlink_rate_bps": 20000000,
+      "max_parallel_contacts": 2,
+      "onboard_bytes": 1000000000,
+      "operational_status": "available",
+      "telemetry_status": "fresh",
+      "position": null,
+      "last_telemetry_at": null,
+      "source": "simulated",
+      "orbit_source": "synthetic",
+      "orbit_epoch_at": "2026-10-31T00:00:00Z"
+    },
+    {
+      "id": "sat-c-001",
+      "name": "Orbitron-Gamma",
+      "owner_org_id": "org-gamma",
+      "supported_bands": ["S", "Ka"],
+      "max_downlink_rate_bps": 8000000,
+      "max_parallel_contacts": 1,
+      "onboard_bytes": 200000000,
+      "operational_status": "available",
+      "telemetry_status": "fresh",
+      "position": null,
+      "last_telemetry_at": null,
+      "source": "simulated",
+      "orbit_source": "synthetic",
+      "orbit_epoch_at": "2026-10-31T00:00:00Z"
+    }
+  ],
+  "stations": [
+    {
+      "id": "gs-svalbard",
+      "name": "Svalbard Arctic Station",
+      "owner_org_id": "org-alpha",
+      "latitude_deg": 78.2298,
+      "longitude_deg": 15.4078,
+      "min_elevation_deg": 5.0,
+      "operational_status": "online",
+      "connection_status": "connected",
+      "weather_capacity_factor": 1.0,
+      "sharing_enabled": true,
+      "approved_partner_org_ids": ["org-beta"],
+      "antennas": [
+        {
+          "id": "ant-sv-01",
+          "name": "Svalbard Dish 1",
+          "supported_bands": ["S", "X"],
+          "max_rate_bps": 15000000,
+          "setup_seconds": 20,
+          "status": "available"
+        },
+        {
+          "id": "ant-sv-02",
+          "name": "Svalbard Ka Dish",
+          "supported_bands": ["Ka"],
+          "max_rate_bps": 25000000,
+          "setup_seconds": 30,
+          "status": "available"
+        }
+      ],
+      "last_heartbeat_at": "2026-10-31T06:00:00Z"
+    },
+    {
+      "id": "gs-bangalore",
+      "name": "Bangalore Ground Station",
+      "owner_org_id": "org-beta",
+      "latitude_deg": 13.0334,
+      "longitude_deg": 77.5640,
+      "min_elevation_deg": 10.0,
+      "operational_status": "online",
+      "connection_status": "connected",
+      "weather_capacity_factor": 0.8,
+      "sharing_enabled": true,
+      "approved_partner_org_ids": ["org-alpha", "org-gamma"],
+      "antennas": [
+        {
+          "id": "ant-blr-01",
+          "name": "Bangalore Main Dish",
+          "supported_bands": ["S", "X", "Ka"],
+          "max_rate_bps": 20000000,
+          "setup_seconds": 25,
+          "status": "available"
+        }
+      ],
+      "last_heartbeat_at": "2026-10-31T06:00:00Z"
+    }
+  ],
+  "orbit_definitions": [
+    {
+      "satellite_id": "sat-a-001",
+      "format": "tle",
+      "line1": "1 25544U 98067A   26304.00000000  .00001000  00000+0  10000-3 0  9999",
+      "line2": "2 25544  51.6400 120.0000 0000478  60.0000  30.0000 15.50000000    11",
+      "epoch_at": "2026-10-31T00:00:00Z",
+      "orbit_source": "synthetic"
+    },
+    {
+      "satellite_id": "sat-b-001",
+      "format": "tle",
+      "line1": "1 33591U 09005A   26304.00000000  .00001000  00000+0  10000-3 0  9994",
+      "line2": "2 33591  98.7000  45.0000 0001234  90.0000 180.0000 14.20000000    12",
+      "epoch_at": "2026-10-31T00:00:00Z",
+      "orbit_source": "synthetic"
+    },
+    {
+      "satellite_id": "sat-c-001",
+      "format": "tle",
+      "line1": "1 25994U 99068A   26304.00000000  .00001000  00000+0  10000-3 0  9990",
+      "line2": "2 25994  98.2000 210.0000 0000850  45.0000 270.0000 14.50000000    15",
+      "epoch_at": "2026-10-31T00:00:00Z",
+      "orbit_source": "synthetic"
+    }
+  ]
+}
