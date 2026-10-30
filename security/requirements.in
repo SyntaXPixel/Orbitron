@@ -1,0 +1,4 @@
+cryptography>=42.0.0
+pyjwt[crypto]>=2.8.0
+argon2-cffi>=21.3.0
+pytest>=8.0.0
