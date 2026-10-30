@@ -1,0 +1,17 @@
+# Pinned lockfile for Orbitron Scheduler
+absl-py==2.5.1
+immutabledict==4.3.1
+iniconfig==2.3.1
+jplephem==2.24
+numpy==2.5.1
+ortools==9.15.6755
+pandas==3.1.0
+pluggy==1.7.0
+protobuf==6.33.6
+pygments==2.21.0
+pytest==9.2.0
+python-dateutil==2.9.0.post0
+sgp4==2.27
+six==1.17.0
+skyfield==1.55
+tzdata==2026.6

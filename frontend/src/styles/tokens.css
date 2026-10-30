@@ -1,0 +1,46 @@
+:root {
+  /* Orbitron Mission Console Color Palette */
+  --color-bg: #07111f;
+  --color-bg-dark: #040913;
+  --color-panel: #111e30;
+  --color-panel-raised: #17273d;
+  --color-panel-hover: #1c304b;
+  --color-border: #293b54;
+  --color-border-subtle: #1c2b3e;
+
+  /* Typography Colors */
+  --color-text: #edf3fc;
+  --color-text-muted: #a4b4ca;
+  --color-text-dim: #6c7f99;
+  --color-pure-white: #ffffff;
+
+  /* Accents & Status Indicators */
+  --color-accent: #8b80ff;
+  --color-accent-hover: #9c93ff;
+  --color-accent-subtle: rgba(139, 128, 255, 0.15);
+  --color-success: #35d4b0;
+  --color-success-subtle: rgba(53, 212, 176, 0.15);
+  --color-warning: #f3bd62;
+  --color-warning-subtle: rgba(243, 189, 98, 0.15);
+  --color-danger: #ff7f8a;
+  --color-danger-subtle: rgba(255, 127, 138, 0.15);
+  --color-active: #22e2a8;
+  --color-active-subtle: rgba(34, 226, 168, 0.15);
+
+  /* Geometry & Radii */
+  --radius-panel: 14px;
+  --radius-control: 8px;
+  --radius-pill: 9999px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Typography font stack */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
